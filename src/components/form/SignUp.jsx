@@ -125,8 +125,8 @@ export default function SignUpForm() {
         </div>
 
         <button type="submit" id="submit-btn"> Claim your free trial </button>
-        <div>
-          <p>By clicking the button, you are agreeing to our <strong>Terms and Services</strong> </p>
+        <div id="final-txt">
+          <p id="Services">By clicking the button, you are agreeing to our <strong className="red-txt">Terms and Services</strong> </p>
         </div>
       </form>
     </div>
