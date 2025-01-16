@@ -1,43 +1,140 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%); 
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-size: 1em;
+  font-family: "Poppins", serif;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+/*header*/
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+#header--container {
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+#header--container #header--title {
+  max-width: 350px;
+  font-size: 2em;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  color: var(--Grayish-Blue);
 }
 
+#header--container #header--text {
+  padding: 0 1.2em;
+  max-width: 350px;
+  margin: 0 auto;
+  color: var(--Dark-Blue);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#row-item {
+  width: 328px;
+  height: 96px;
+  background-color: var(--Blue);
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+#sub--title {
+  padding: 0 5em;
+  margin-top: 1.5em;
+  line-height: 24px;
+}
+
+#form--container {
+  width: 328px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+input[name='firstName'] {
+  margin-top: 3em;
+}
+
+.Row-item {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+input {
+  width: 300px;
+  height: 55px;
+  margin: 1.1em 0;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid hsl(246, 25%, 77%);
+  color: #000;
+  padding-left: 1em;
+}
+
+input::placeholder {
+  text-transform: capitalize;
+}
+
+input:focus {
+  outline: none;
+}
+
+.error-sms1-img {
+  position: absolute;
+  top: 4em;
+  right: 2em;
+}
+
+.error-sms2-img, .error-sms3-img, .error-sms4-img {
+  position: absolute;
+  top: 2.5em;
+  right: 2em;
+}
+
+.error-sms1-txt, .error-sms2-txt, .error-sms3-txt,.error-sms4-txt {
+  color: var(--Red);
+  position: absolute;
+  bottom: -7px;
+  left: 1.2em;
+}
+
+#submit-btn {
+  width: 300px;
+  height: 50px;
+  margin-top: 1em;
+}
+
+
+
+@media (min-width: 700px) {
+  body main{
+    display: flex;
+    flex-direction: row;
+  }
+}

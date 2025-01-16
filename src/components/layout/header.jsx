@@ -1,7 +1,7 @@
 
 
 
-export default Header() {
+export default function Header() {
     return (
         <header id="header--container">
             <h1 id="header--title">Learn to code by watching others</h1>
