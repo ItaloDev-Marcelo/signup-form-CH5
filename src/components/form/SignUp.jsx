@@ -27,10 +27,10 @@ export default function SignUpForm() {
     let sms3 = document.querySelector('.error-sms3-txt');
     let sms4 = document.querySelector('.error-sms4-txt');
 
-    let inputstyle1 = document.getElementById('first--Name');
-    let inputstyle2 = document.getElementById('last--Name');
-    let inputstyle3 = document.getElementById('email');
-    let inputstyle4 = document.getElementById('password');
+    let inputstyle1 = document.querySelector('#first--Name');
+    let inputstyle2 = document.querySelector('#last--Name');
+    let inputstyle3 = document.querySelector('#email');
+    let inputstyle4 = document.querySelector('#password');
 
     if (firstName === '') {
       
