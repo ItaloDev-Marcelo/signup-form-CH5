@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import SignUpInput from "../Common-input"
 import ErrorIconSvg from './icon/icon-error.svg'
 
@@ -27,59 +27,62 @@ export default function SignUpForm() {
     let sms3 = document.querySelector('.error-sms3-txt');
     let sms4 = document.querySelector('.error-sms4-txt');
 
-    let inputstyle1 = document.querySelector('#first--Name');
-    let inputstyle2 = document.querySelector('#last--Name');
-    let inputstyle3 = document.querySelector('#email');
-    let inputstyle4 = document.querySelector('#password');
+    let inputstyle1 = document.querySelector('.Row-item #first--Name');
+    let inputstyle2 = document.querySelector('.Row-item #last--Name');
+    let inputstyle3 = document.querySelector('.Row-item #email');
+    let inputstyle4 = document.querySelector('.Row-item #password');
 
+    if (firstName === '' && lastName === '' && email === '' && password === '') {
+      inputstyle1.style.borderColor = 'red'
+      inputstyle2.style.borderColor = 'red'
+      inputstyle3.style.borderColor = 'red'
+      inputstyle4.style.borderColor = 'red'
+    }
+
+    
     if (firstName === '') {
       
-      inputstyle1.style.outlineColor = 'red'
+      inputstyle1.style.borderColor = 'red'
       img1.style.display = 'block'
       sms1.style.display = 'block'
     } else {
       
-      inputstyle1.style.outlineColor = '#b9b6d3'
+      inputstyle1.style.borderColor = '#b9b6d3'
       img1.style.display = 'none'
       sms1.style.display = 'none'
     }
 
     if (lastName === '') {
-      
-      inputstyle2.style.outlineColor = 'red'
+      inputstyle2.style.borderColor = 'red'
       img2.style.display = 'block'
       sms2.style.display = 'block'
     } else {
-      
-      inputstyle2.style.outlineColor = '#b9b6d3'
+      inputstyle2.style.borderColor = '#b9b6d3'
       img2.style.display = 'none'
       sms2.style.display = 'none'
     }
 
 
     if (email === '') {
-      
-      inputstyle3.style.outlineColor = 'red'
+      inputstyle3.style.borderColor = 'red'
       img3.style.display = 'block'
       sms3.style.display = 'block'
     } else {
-      
-      inputstyle3.style.outlineColor = '#b9b6d3'
+      inputstyle3.style.borderColor = '#b9b6d3'
       img3.style.display = 'none'
       sms3.style.display = 'none'
     }
 
     if (password === '') {
-      
-      inputstyle4.style.outlineColor = 'red'
+      inputstyle4.style.borderColor = 'red'
       img4.style.display = 'block'
       sms4.style.display = 'block'
     } else {
-      
-      inputstyle4.style.outlineColor = '#b9b6d3'
+      inputstyle4.style.borderColor = '#b9b6d3'
       img4.style.display = 'none'
       sms4.style.display = 'none'
     }
+
 
 
 
@@ -99,7 +102,6 @@ export default function SignUpForm() {
     event.preventDefault()
     setError(true)
     error ? ErrorTest() : null
-
   }
 
   return (
@@ -111,7 +113,7 @@ export default function SignUpForm() {
       <form onSubmit={hundleSignUpSubmit} id='form--container'>
 
         <div className="Row-item">
-          <SignUpInput name={'firstName'} id={'first--Name'} type={'text'}
+          <SignUpInput name={'firstName'} inputTxt={'First Name'} id={'first--Name'} type={'text'}
             value={SignUpFormData.firstName} onChange={hundleChange}
           />
           {error ? <><img className='error-sms1-img' src={ErrorIconSvg} />
@@ -119,7 +121,7 @@ export default function SignUpForm() {
         </div>
 
         <div className="Row-item">
-          <SignUpInput name={'lastName'} id={'last--Name'} type={'text'}
+          <SignUpInput name={'lastName'} inputTxt={'Last Name'} id={'last--Name'} type={'text'}
             value={SignUpFormData.lastName} onChange={hundleChange}
           />
           {error ? <><img className='error-sms2-img' src={ErrorIconSvg} />
@@ -127,7 +129,7 @@ export default function SignUpForm() {
         </div>
 
         <div className="Row-item">
-          <SignUpInput name={'email'} id={'email'} type={'email'}
+          <SignUpInput name={'email'} inputTxt={'Email'} id={'email'} type={'email'}
             value={SignUpFormData.email} onChange={hundleChange}
           />
           {error ? <><img className='error-sms3-img' src={ErrorIconSvg} />
@@ -135,7 +137,7 @@ export default function SignUpForm() {
         </div>
 
         <div className="Row-item">
-          <SignUpInput name={'password'} id={'password'} type={'password'}
+          <SignUpInput name={'password'} inputTxt={'Password'} id={'password'} type={'password'}
             value={SignUpFormData.password} onChange={hundleChange}
           />
           {error ? <><img className='error-sms4-img' src={ErrorIconSvg} />
