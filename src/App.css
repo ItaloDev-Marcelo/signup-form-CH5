@@ -95,6 +95,11 @@ input {
   margin: 1.1em 0;
   border-radius: 7px;
   background-color: transparent;
+<<<<<<< HEAD
+=======
+  border: none;
+  outline: 1px solid #b9b6d3;
+>>>>>>> 72a4323d8c81c2adbecdbd417f93f387365b1f75
   color: #000;
   padding-left: 1em;
 }
