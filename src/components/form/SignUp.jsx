@@ -32,7 +32,7 @@ export default function SignUpForm() {
     let inputstyle3 = document.querySelector('.Row-item #email');
     let inputstyle4 = document.querySelector('.Row-item #password');
 
-    if (firstName === '' && lastName === '' && email === '' && password === '') {
+    if (firstName == '' && lastName == '' && email == '' && password == '') {
       inputstyle1.style.borderColor = 'red'
       inputstyle2.style.borderColor = 'red'
       inputstyle3.style.borderColor = 'red'
@@ -83,10 +83,6 @@ export default function SignUpForm() {
       sms4.style.display = 'none'
     }
 
-
-
-
-
   }
 
 
@@ -101,7 +97,7 @@ export default function SignUpForm() {
   function hundleSignUpSubmit(event) {
     event.preventDefault()
     setError(true)
-    error ? ErrorTest() : null
+    !error ? ErrorTest() : null
   }
 
   return (
