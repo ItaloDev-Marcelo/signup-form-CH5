@@ -28,7 +28,6 @@ body {
 }
 
 
-
 /*header*/
 
 #header--container {
@@ -94,14 +93,18 @@ input {
   width: 300px;
   height: 55px;
   margin: 1.1em 0;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: transparent;
-  border: 1px solid #b9b6d3;
   color: #000;
   padding-left: 1em;
 }
 
+.Row-item input {
+  border: 1px solid #b9b6d3;
+}
+
 input::placeholder {
+  font-weight: bold;
   text-transform: capitalize;
 }
 
@@ -149,9 +152,114 @@ input:focus, #submit-btn:focus {
 }
 
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   body main{
     display: flex;
     flex-direction: row;
   }
+
+
+  #header--container {
+    position: relative;
+    top: 13em;
+    text-align: left;
+  }
+
+
+  #header--container #header--title {
+    font-size: 2.2em;
+  }
+
+  #header--container #header--text {
+    padding: 0 ;
+    max-width: 350px;
+    margin: 0 auto;
+    color: #ffe5e4;
+    font-weight: 500;
+  }
+  
+  
+
+
+  
+
+  
+}
+
+
+@media (min-width: 1280px) {
+  body main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 1200px;
+    overflow: hidden;
+  }
+
+  #form--container, #row-item  {
+    width: 543px;
+  }
+
+  #header--container #header--title {
+    max-width: 450px;
+    font-size: 3em;
+  }
+
+  #header--container #header--text {
+    padding: 0 ;
+    max-width: 450px;
+  }
+
+  #sub--title {
+    padding: 0 5em;
+    margin-top: 1em;
+    line-height: 24px;
+  }
+  
+  #form--container {
+    height: 564px;
+  }
+
+  #row-item {
+    height: 50px;
+    margin: 4em 0 2em 0;
+    border-radius: 7px;
+  }
+  
+ input, #submit-btn {
+  width: 461px;
+ }
+
+  input {
+    margin: 1.4em 0;
+  }
+
+
+  #submit-btn {
+    margin-top: 2em;
+  }
+
+  .error-sms1-img {
+    top: 4.2em;
+    right: 4.5em;
+  }
+  
+  .error-sms2-img, .error-sms3-img, .error-sms4-img {
+    top: 2.6em;
+    right: 4.5em;
+  }
+  
+  .error-sms1-txt, .error-sms2-txt,.error-sms4-txt {
+    right: -16em;
+  }
+  .error-sms3-txt {
+    right: -19em;
+  }
+
+  #Services {
+    padding: 2em 0;
+  }
+  
+
+  
 }

@@ -2,7 +2,7 @@
 
 
 
-export default function SignUpInput({id,name,type,value,onChange}) {
+export default function SignUpInput({id,name,type,value,onChange, inputTxt}) {
  
     return (
           <label htmlFor={id} >
@@ -12,7 +12,7 @@ export default function SignUpInput({id,name,type,value,onChange}) {
            type={type} 
            value={value} 
            onChange={onChange}
-           placeholder={id}
+           placeholder={inputTxt}
            />
           </label>
     )
