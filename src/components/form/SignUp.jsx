@@ -27,11 +27,19 @@ export default function SignUpForm() {
     let sms3 = document.querySelector('.error-sms3-txt');
     let sms4 = document.querySelector('.error-sms4-txt');
 
-    let inputstyle1 = document.getElementById('first--Name');
-    let inputstyle2 = document.getElementById('last--Name');
-    let inputstyle3 = document.getElementById('email');
-    let inputstyle4 = document.getElementById('password');
+    let inputstyle1 = document.querySelector('.Row-item #first--Name');
+    let inputstyle2 = document.querySelector('.Row-item #last--Name');
+    let inputstyle3 = document.querySelector('.Row-item #email');
+    let inputstyle4 = document.querySelector('.Row-item #password');
 
+    if (firstName === '' && lastName === '' && email === '' && password === '') {
+      inputstyle1.style.borderColor = 'red'
+      inputstyle2.style.borderColor = 'red'
+      inputstyle3.style.borderColor = 'red'
+      inputstyle4.style.borderColor = 'red'
+    }
+
+    
     if (firstName === '') {
       
       inputstyle1.style.borderColor = 'red'
@@ -45,12 +53,10 @@ export default function SignUpForm() {
     }
 
     if (lastName === '') {
-      
       inputstyle2.style.borderColor = 'red'
       img2.style.display = 'block'
       sms2.style.display = 'block'
     } else {
-      
       inputstyle2.style.borderColor = '#b9b6d3'
       img2.style.display = 'none'
       sms2.style.display = 'none'
@@ -58,24 +64,20 @@ export default function SignUpForm() {
 
 
     if (email === '') {
-      
       inputstyle3.style.borderColor = 'red'
       img3.style.display = 'block'
       sms3.style.display = 'block'
     } else {
-      
       inputstyle3.style.borderColor = '#b9b6d3'
       img3.style.display = 'none'
       sms3.style.display = 'none'
     }
 
     if (password === '') {
-      
       inputstyle4.style.borderColor = 'red'
       img4.style.display = 'block'
       sms4.style.display = 'block'
     } else {
-      
       inputstyle4.style.borderColor = '#b9b6d3'
       img4.style.display = 'none'
       sms4.style.display = 'none'
@@ -99,7 +101,7 @@ export default function SignUpForm() {
   function hundleSignUpSubmit(event) {
     event.preventDefault()
     setError(true)
-    !error ? ErrorTest() : null
+    error ? ErrorTest() : null
   }
 
   return (
