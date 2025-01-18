@@ -9,12 +9,16 @@ export default function UseFormHook(){
 
 
     function onFormSubmit(formData) {
-        console.log(formData)
+        // this formData if you want to check  the data
+        //console.log(formData)
         reset()
         
     }
     return (
       <div id='container'>
+      <div id='row-item'>
+       <p id='sub--title'> Try it free 7 days then $20/mo. thereafter</p>
+      </div>
       <form id='form--container' onSubmit={handleSubmit(onFormSubmit)}>
          <div className='Row-item'>
          <label htmlFor="firstname">
@@ -74,6 +78,11 @@ export default function UseFormHook(){
 
 
          <button id='submit-btn' type="submit">Submit form</button>
+
+       <div id='Services'>
+        <p id='final-txt'>By clicking the button, you are agreeing to our <strong className='red-txt'>Terms and Services</strong> </p>
+       </div>
+         
       </form>
       </div>
       
