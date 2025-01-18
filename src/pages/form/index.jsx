@@ -17,7 +17,7 @@ export default function UseFormHook(){
     return (
       <div id='container'>
       <div id='row-item'>
-       <p id='sub--title'> Try it free 7 days then $20/mo. thereafter</p>
+       <p id='sub--title'> <strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
       </div>
       <form id='form--container' onSubmit={handleSubmit(onFormSubmit)}>
          <div className='Row-item'>
@@ -72,7 +72,7 @@ export default function UseFormHook(){
          }
          </label>
          {
-            errors.password && errors.password.type === 'required' ? <p className='error-sms4-txt'>Email cannot be empty</p> : null      
+            errors.password && errors.password.type === 'required' ? <p className='error-sms4-txt'>Password cannot be empty</p> : null      
              }
         </div>
 
