@@ -24,7 +24,7 @@ export default function UseFormHook(){
          <label htmlFor="firstname">
            <input style={{borderColor: errors.firstName ? 'red' : 'gray'}}  {...register('firstName', {
             required: true
-           })} name='firstName' id='firstname' placeholder="First Name" type="text" />
+           })} name='firstName' id='firstname' placeholder={errors.firstName ?  '' : 'First Name'} type="text" />
            {
           errors.firstName && errors.firstName.type === 'required' ? <img src={errorSvgIcon} alt='error-icon' className='error-sms1-img' /> : null  
          }
@@ -38,9 +38,9 @@ export default function UseFormHook(){
          <label htmlFor="lastname">
            <input  style={{borderColor: errors.lastName ? 'red' : 'gray'}} {...register('lastName', {
             required: true
-           })}  name='lastName' id='lastname' placeholder="Last Name" type="text" />
+           })}  name='lastName' id='lastname' placeholder={errors.lastName ? '' : 'Last Name'} type="text" />
             {
-          errors.lasttName && errors.lastName.type === 'required' ? <img src={errorSvgIcon} alt='error-icon' className='error-sms2-img'/> : null  
+          errors.lastName && errors.lastName.type === 'required' ? <img src={errorSvgIcon} alt='error-icon' className='error-sms2-img'/> : null  
          }
          </label>
          {
@@ -50,9 +50,9 @@ export default function UseFormHook(){
  
         <div  className='Row-item'>
         <label htmlFor="email">
-           <input  style={{borderColor: errors.email ? 'red' : 'gray'}}  {...register('email', {
+           <input className={ errors.email ? 'placeholder-red' : ''} style={{borderColor: errors.email ? 'red' : 'gray'}}  {...register('email', {
             required: true
-           })}  name='email' id='email' placeholder="Email" type="email" />
+           })}  name='email' id='email' placeholder={errors.email ?   'email@exemplo/com' : 'Email' } type="email" />
                {
           errors.email && errors.email.type === 'required' ? <img src={errorSvgIcon} alt='error-icon'  className='error-sms3-img' /> : null  
          }
@@ -66,7 +66,7 @@ export default function UseFormHook(){
         <label htmlFor="password">
            <input  style={{borderColor: errors.password ? 'red' : 'gray'}}  {...register('password', {
             required: true
-           })}  name='password' id='password' placeholder="Password" type="password" />
+           })}  name='password' id='password' placeholder={errors.password ? '' : 'Password' } type="password" />
                   {
           errors.password && errors.password.type === 'required' ? <img src={errorSvgIcon} alt='error-icon' className='error-sms4-img'/> : null  
          }
@@ -77,7 +77,7 @@ export default function UseFormHook(){
         </div>
 
 
-         <button id='submit-btn' type="submit">Submit form</button>
+         <button id='submit-btn' type="submit">claim your free trial</button>
 
        <div id='Services'>
         <p id='final-txt'>By clicking the button, you are agreeing to our <strong className='red-txt'>Terms and Services</strong> </p>
