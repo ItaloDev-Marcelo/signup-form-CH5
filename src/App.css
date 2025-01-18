@@ -152,6 +152,7 @@ input:focus, #submit-btn:focus {
   height: 50px;
   margin: 1.3em 0 0 0;
   background-color: var(--Green);
+  color: #fff;
   border: none;
   outline: none;
 }
