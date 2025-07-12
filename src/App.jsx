@@ -1,16 +1,9 @@
 
-import './App.css'
-import Header from './pages/header/index'
-import UseFormHook from './pages/form'
+import './App.css';
+import FormLayout from './layout/FormLayout';
 
 function App() {
-
-  return (
-    <main>
-      <Header/>
-      <UseFormHook/>
-    </main>
-  )
+  return <FormLayout/>
 }
 
 export default App
