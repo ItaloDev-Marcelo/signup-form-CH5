@@ -1,5 +1,5 @@
 
-import './App.css';
+import './style.css';
 import FormLayout from './layout/FormLayout';
 
 function App() {

@@ -54,7 +54,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 
@@ -65,7 +64,7 @@ body {
   width: 328px;
   height: 96px;
   background-color: var(--Blue);
-  margin-bottom: 2em;
+  margin: 2em 0;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
   border-radius: 7px;
   font-weight: 300;
@@ -83,7 +82,7 @@ body {
   color: var(--Grayish-Blue);
   border-radius: 10px;
   margin-bottom: 2em;
-  padding: .5em 0;
+  padding: 1.5em;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
 }
 
@@ -98,7 +97,7 @@ input[name='firstName'] {
 }
 
 input {
-  width: 300px;
+  width: 100%;
   height: 55px;
   margin: 1.1em 0;
   border-radius: 7px;
@@ -136,28 +135,26 @@ label
   right: 1em;
 }
 
-
-
 .error-sms1-txt{
   color: var(--Red);
   position: absolute;
   bottom: -10px;
-  left: 1em;
+  right: .2em;
   font-style: oblique;
 }
-
 
 
 #submit-btn {
   text-transform: uppercase;
   letter-spacing: .5px;
-  width: 300px;
+  width: 100%;
   height: 50px;
   margin: 1.3em 0 0 0;
   background-color: var(--Green);
   color: #fff;
   border: none;
   outline: none;
+  border-radius: 7px;
 }
 
 #submit-btn:hover {
@@ -179,17 +176,49 @@ label
 }
 
 
-/*you need to fix all the erros-img and erros-text */
+@media (min-width: 800px){
 
 
-@media (min-width: 800px) {
+    #row-item {
+  width: 500px;
+}
+
+
+      #form--container {
+  width: 500px;
+}
+
+ #header--container {
+    position: relative;
+    top: 8.5em;
+  }
+
+  #container {
+  margin-top: 7em;
+}
+
+}
+
+
+@media (min-width: 1024px) {
+
+      body {
+  background-image: url(./assets/images/bg-intro-desktop.png);
+  }
+
+ 
+
   body main{
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    justify-content: space-evenly;
   }
 
+ 
+
   #row-item {
+    width: 400px;
     height: 75px;
     margin: 1em 0;
   }
@@ -198,186 +227,94 @@ label
     top: 3em;
   }
   
+  #form--container {
+  width: 400px;
+  margin-bottom: 2em;
+  padding: 2em;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
+}
   
 
   input[name='firstName'] {
     margin-top: 1.7em;
   }
 
-  #header--container {
+
+   #header--container {
     position: relative;
-    top: 8.5em;
     text-align: left;
+    top: 14em;
   }
+ 
 
   #header--container #header--text {
     padding: 0 ;
   }
+
+  
   
 }
 
-@media (min-width: 1024px) {
 
-  body {
-  background-image: url(./assets/images/bg-intro-desktop.png);
-  }
-
-
-  body main{
-    width: 1000px;
-  }
-
-
-  .error-sms1-img {
-  position: absolute;
-  top: 4em;
-  right: 5em;
+@media (min-width: 1280px) {
+   #header--container {
+  padding: 4em 2em;
 }
 
-
-.error-sms2-img, .error-sms3-img, .error-sms4-img {
-  position: absolute;
-  top: 2.2em;
-  right: 5em;
-}
-
-.error-sms1-txt{
-  text-align: right;
-  width: 300px;
-  left: 9rem;
-}
-
-
-
-
-
-  #header--container {
-    top: 13em;
+#row-item {
+    width: 550px;
   }
-
-
-  #header--container #header--title {
-    font-size: 3.4em;
-  }
-
-  #header--container #header--title ,
-  #header--container #header--text {
-    max-width: 400px;
-  }
-
-  #header--container #header--text {
-    padding: 0;
-  }
-  
-
-
-  #form--container,  #row-item  {
-    width: 500px;
-  }
-
-
-
-  input[name='firstName'] {
-    margin-top: 3em;
-  }
-  
-
-  input, #submit-btn {
-    width: 400px;
-  }
-
-  #Services {
-  font-size: .9em;
-  padding: 2em 3em;
-} 
-}
-
-@media (min-width: 1366px) {
-  body main{
-    justify-content: space-evenly;
-    width: 1200px;
-  }
-
-  #header--container #header--title {
-    margin: 1em 0 .5em 0;
-    color: #fff;
-  }
-
-  #header--container #header--title ,
-  #header--container #header--text {
-    max-width: 500px;
-    border: 1px solid outset;
-  }
-
-
-  input {
-    margin: 1.3em 0;
-  }
-
-  input, #submit-btn {
-    max-width: 100%;
-  }
-
-  #submit-btn {
-    margin-top: 1.2em;
-  }
-
-  
-  #row-item  {
-    margin-bottom: 2.2em;
-  }
-
-  #form--container,  #row-item  {
-    width: 575px; 
-  }
-
 
   #form--container {
-    height: 555px;
-  padding: 1em 0;
-  }
-
-
-  .error-sms1-img {
-  right: 4em;
+  width:550px;
+  margin-bottom: 2em;
+  padding: 2em;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
 }
-
-
-.error-sms2-img, .error-sms3-img, .error-sms4-img {
-  right: 4em;
-}
-
-.error-sms1-txt, .error-sms2-txt{
-  left: 20.5em;
-}
-
-.error-sms3-txt{
-  left:23.2em;
-}
-
-.error-sms4-txt {
-  left: 20.7em;
-}
-
-}
-
-@media (min-width: 1440px) {
-  body main{
-    width: 1500px;
-  } 
-  
-
   #header--container #header--title {
-    font-size: 4em;
-  } 
-
-  #header--container #header--title ,
-  #header--container #header--text {
-    max-width: 600px;
-  }
+  max-width: 400px;
+  font-size: 2.5em;
+}
 
 
-  #header--container #header--text {
-    font-size: 1.3em;
-  }
+#header--container #header--text {
+  padding: 0 1em;
+  max-width: 425px;
+}
+
+
+}
+
+
+@media (min-width: 1366px) {
+
+ 
+#header--container #header--title {
+  max-width: 400px;
+  font-size: 3.5em;
+}
+
+
+#header--container #header--text {
+  padding: 0 1em;
+  max-width: 425px;
+  font-size: 2em;
+}
+}
+
+
+@media (min-width: 1366px) {
+
+ 
+#header--container #header--title {
+  max-width: 500px;
+  font-size: 2.5em;
+}
+
+
+#header--container #header--text {
+  padding: 0 1.4em 0 0;
+  max-width: 500px;
+  font-size: 1em;
+}
 }
