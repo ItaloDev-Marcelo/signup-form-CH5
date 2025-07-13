@@ -1,5 +1,5 @@
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 100%;
@@ -9,7 +9,7 @@
   --Red: hsl(0, 100%, 74%);
   --Green: hsl(154, 59%, 51%);
   --Blue: hsl(248, 32%, 49%);
-  --Dark-Blue: hsl(249, 10%, 26%); 
+  --Dark-Blue: hsl(249, 10%, 26%);
   --Grayish-Blue: hsl(246, 25%, 77%);
 }
 
@@ -29,6 +29,10 @@ body {
 
 
 /*header*/
+
+main {
+  margin-top: -5em;
+}
 
 #header--container {
   padding: 2em;
@@ -65,7 +69,7 @@ body {
   height: 96px;
   background-color: var(--Blue);
   margin: 2em 0;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
   font-weight: 300;
   color: #fff;
@@ -83,7 +87,7 @@ body {
   border-radius: 10px;
   margin-bottom: 2em;
   padding: 1.5em;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 input[name='firstName'] {
@@ -116,11 +120,13 @@ input::placeholder {
   text-transform: capitalize;
 }
 
-input:focus, #submit-btn:focus {
+input:focus,
+#submit-btn:focus {
   outline: none;
 }
-.placeholder-red::placeholder{
-   color: var(--Red);
+
+.placeholder-red::placeholder {
+  color: var(--Red);
 }
 
 
@@ -128,14 +134,13 @@ label {
   position: relative;
 }
 
-label
-.error-sms1-img {
+label .error-sms1-img {
   position: absolute;
   top: 0;
   right: 1em;
 }
 
-.error-sms1-txt{
+.error-sms1-txt {
   color: var(--Red);
   position: absolute;
   bottom: -10px;
@@ -176,46 +181,46 @@ label
 }
 
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
 
 
-    #row-item {
-  width: 500px;
-}
+  #row-item {
+    width: 500px;
+  }
 
 
-      #form--container {
-  width: 500px;
-}
+  #form--container {
+    width: 500px;
+  }
 
- #header--container {
+  #header--container {
     position: relative;
     top: 8.5em;
   }
 
   #container {
-  margin-top: 7em;
-}
+    margin-top: 7em;
+  }
 
 }
 
 
 @media (min-width: 1024px) {
 
-      body {
-  background-image: url(./assets/images/bg-intro-desktop.png);
+  body {
+    background-image: url(./assets/images/bg-intro-desktop.png);
   }
 
- 
 
-  body main{
+
+  body main {
     display: flex;
     flex-direction: row;
     overflow: hidden;
     justify-content: space-evenly;
   }
 
- 
+
 
   #row-item {
     width: 400px;
@@ -226,95 +231,119 @@ label
   .error-sms1-img {
     top: 3em;
   }
-  
+
   #form--container {
-  width: 400px;
-  margin-bottom: 2em;
-  padding: 2em;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
-}
-  
+    width: 400px;
+    margin-bottom: 2em;
+    padding: 2em;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  }
+
 
   input[name='firstName'] {
     margin-top: 1.7em;
   }
 
 
-   #header--container {
+  #header--container {
     position: relative;
     text-align: left;
     top: 14em;
   }
- 
+
 
   #header--container #header--text {
-    padding: 0 ;
+    padding: 0;
   }
 
-  
-  
+
+
 }
 
 
 @media (min-width: 1280px) {
-   #header--container {
-  padding: 4em 2em;
-}
+  #header--container {
+    padding: 4em 2em;
+  }
 
-#row-item {
+  #row-item {
     width: 550px;
   }
 
   #form--container {
-  width:550px;
-  margin-bottom: 2em;
-  padding: 2em;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); 
-}
+    width: 550px;
+    margin-bottom: 2em;
+    padding: 2em;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  }
+
   #header--container #header--title {
-  max-width: 400px;
-  font-size: 2.5em;
+    max-width: 400px;
+    font-size: 2.5em;
+  }
+
+
+  #header--container #header--text {
+    padding: 0 1em;
+    max-width: 425px;
+  }
+
+
 }
 
 
-#header--container #header--text {
-  padding: 0 1em;
-  max-width: 425px;
+@media (min-width: 1360px) {
+
+  body {
+    overflow: hidden;
+  }
+
+
+  main {
+    position: relative;
+    top: -1.7em;
+  }
+
+
+  #form--container {
+    padding: 1.3em;
+  }
+
+
+
+
+  #header--container #header--title {
+    max-width: 500px;
+    font-size: 2.5em;
+  }
+
+
+  #header--container #header--text {
+    padding: 0 1.4em 0 0;
+    max-width: 500px;
+    font-size: 1em;
+  }
 }
 
 
-}
+@media (min-width: 1440px) {
+
+  main {
+    position: relative;
+    top: 3em;
+  }
+
+  #header--container #header--title {
+    max-width: 600px;
+    font-size: 3em;
+  }
 
 
-@media (min-width: 1366px) {
-
- 
-#header--container #header--title {
-  max-width: 400px;
-  font-size: 3.5em;
-}
+  #header--container #header--text {
+    padding: 0 1.4em 0 0;
+    max-width: 600px;
+    font-size: 1em;
+  }
 
 
-#header--container #header--text {
-  padding: 0 1em;
-  max-width: 425px;
-  font-size: 2em;
-}
-}
-
-
-@media (min-width: 1366px) {
-
- 
-#header--container #header--title {
-  max-width: 500px;
-  font-size: 2.5em;
-}
-
-
-#header--container #header--text {
-  padding: 0 1.4em 0 0;
-  max-width: 500px;
-  font-size: 1em;
-}
 }

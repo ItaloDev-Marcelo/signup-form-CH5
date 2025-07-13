@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import Input from '../Input'
-import Service from '../Services-sms/index'
+import Input from '../components/Input'
+import Service from '../components/Services-sms/index'
 
 export default function Form(){
 

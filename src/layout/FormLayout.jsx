@@ -1,5 +1,5 @@
-import Header from '../components/header/index';
-import Form from '../components/Form/index';
+import Header from '../Header/index';
+import Form from '../Form/index';
 
 const FormLayout = () => {
   return (
