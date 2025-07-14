@@ -14,17 +14,17 @@ export default function Form(){
       </div>
       <form id='form--container' onSubmit={handleSubmit(onFormSubmit)}>
          
-         <Input errors={errors} register={register} errorPlaceholder='First Name' 
+         <Input errors={errors} register={register} errorPlaceholder='First Name' errorDefault=''
          errorSms='First Name cannot be empty' name='firstname' id='firstname' inputType='text' />
    
-         <Input errors={errors} register={register} errorPlaceholder='Last Name' 
+         <Input errors={errors} register={register} errorPlaceholder='Last Name' errorDefault=''
          errorSms='Last Name cannot be empty' name='lastname' id='lastname' inputType='text'/>
  
 
-         <Input errors={errors} register={register} errorPlaceholder='Email' 
+         <Input errors={errors} register={register} errorPlaceholder='Email' errorDefault='SomeEmail@gmail.com'
          errorSms='Email cannot be empty' name='email' id='email' inputType='email' />
         
-        <Input errors={errors} register={register} errorPlaceholder='Password' 
+        <Input errors={errors} register={register} errorPlaceholder='Password' errorDefault=''
          errorSms='Password cannot be empty' name='password' id='password' inputType='password' />
 
          <button id='submit-btn' type="submit">claim your free trial</button>
